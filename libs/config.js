@@ -1,3 +1,6 @@
+/*jslint node: true */
+"use strict";
+
 var express = require('express');
 
 /**
@@ -10,5 +13,5 @@ module.exports = function (app) {
     app.set('view engine', 'jade');
     app.use('/static', express.static(__dirname + '/../public'));
     
-    return app
-}
+    return app;
+};

@@ -1,3 +1,6 @@
+/*jslint node: true */
+"use strict";
+
 module.exports = (function () {
     var Q = require('q');
     
@@ -20,7 +23,7 @@ module.exports = (function () {
      * @params {object} res - Reponse à envoyer à l'utilisateur
      * @params {object} next - Permet de passer au middleware suivant
      */
-    function indexAction (req, res, next){
+    function indexAction(req, res, next) {
         res.render('index');
-    };
+    }
 })();

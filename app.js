@@ -1,3 +1,6 @@
+/*jslint node: true */
+"use strict";
+
 var express   = require('express'),
     router    = require('./libs/routers/router.js'),
     configure = require('./libs/config.js'),

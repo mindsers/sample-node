@@ -1,3 +1,6 @@
+/*jslint node: true */
+"use strict";
+
 var defaultRouter = require('./default.js');
 
 /**
