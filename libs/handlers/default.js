@@ -21,6 +21,6 @@ module.exports = (function () {
      * @params {object} next - Permet de passer au middleware suivant
      */
     function indexAction (req, res, next){
-        res.send('Hello');
+        res.render('index');
     };
 })();

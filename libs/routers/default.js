@@ -5,7 +5,7 @@ var defaultController = require('../handlers/default.js'),
     errorHandler  = require('../handlers/error.js');
 
 router.route('/hello')
-            .get(defaultController.index)
+            .get(defaultController.indexAction)
             .post(errorHandler.default(405));
 
 /**
