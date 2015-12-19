@@ -1,3 +1,5 @@
+var express = require('express');
+
 /**
  * Make configuration on the app
  * 
@@ -6,6 +8,7 @@
  */
 module.exports = function (app) {
     app.set('view engine', 'jade');
+    app.use('/static', express.static(__dirname + '/../public'));
     
     return app
 }
