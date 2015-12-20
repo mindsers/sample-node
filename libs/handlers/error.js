@@ -37,7 +37,6 @@ module.exports = (function () {
                     res.status(code).json(response);
                     break;
             }
-            
         };
     }
     
@@ -281,4 +280,4 @@ module.exports = (function () {
     };
     
     return ErrorHandler;
-}());
+})();
