@@ -9,7 +9,7 @@ var defaultController = require('../handlers/default.js'),
 
 router.route('/hello')
             .get(defaultController.indexAction)
-            .post(errorHandler.default(405));
+            .post(errorHandler.defaultError(405));
 
 /**
  * All default routes

@@ -2,13 +2,15 @@
 "use strict";
 
 module.exports = (function () {
-    var ErrorHandler = {
-        error: personalizedError,
-        default: defaultError
-    };
-    
-    return ErrorHandler;
-    
+    /**
+     * Send HTTP response with code and 
+     * description custom.
+     * 
+     * @function personalizedError
+     * @params {int} code - HTTP Error Code
+     * @params {string} msg - Description
+     * @return {function} express middleware
+     */
     function personalizedError(code, msg) {
         return function (req, res, next) {
             var response = _defaultJSON(code);
@@ -18,6 +20,13 @@ module.exports = (function () {
         };
     }
     
+    /**
+     * Send HTTP default response for HTTP code
+     * 
+     * @function defaultError
+     * @params {int} code - HTTP Error Code
+     * @return {function} express middleware
+     */
     function defaultError(code) {
         return function (req, res, next) {
             res.status(code).json(_defaultJSON(code));
@@ -25,142 +34,222 @@ module.exports = (function () {
     }
     
     function _defaultJSON(code) {
+        var json = { status: code, description: '' };
+        
         switch (code) {
         /* Success */
         case 200:
-            return { status: 200, description: 'OK' };
+            json.description = 'OK';
+            break;
         case 201:
-            return { status: 201, description: 'Created' };
+            json.description = 'Created';
+            break;
         case 202:
-            return { status: 202, description: 'Accepted' };
+            json.description = 'Accepted';
+            break;
         case 203:
-            return { status: 203, description: 'Non-Authoritative Information' };
+            json.description = 'Non-Authoritative Information';
+            break;
         case 204:
-            return { status: 204, description: 'No Content' };
+            json.description = 'No Content';
+            break;
         case 205:
-            return { status: 205, description: 'Reset Content' };
+            json.description = 'Reset Content';
+            break;
         case 206:
-            return { status: 206, description: 'Partial Content' };
+            json.description = 'Partial Content';
+            break;
         case 207:
-            return { status: 207, description: 'Multi-Status' };
+            json.description = 'Multi-Status';
+            break;
         case 210:
-            return { status: 210, description: 'Content Different' };
+            json.description = 'Content Different';
+            break;
 
         /* Redirection */
         case 300:
-            return { status: 300, description: 'Multiple Choices' };
+            json.description = 'Multiple Choices';
+            break;
         case 301:
-            return { status: 301, description: 'Moved Permanently' };
+            json.description = 'Moved Permanently';
+            break;
         case 302:
-            return { status: 302, description: 'Moved Temporarily' };
+            json.description = 'Moved Temporarily';
+            break;
         case 303:
-            return { status: 303, description: 'See Other' };
+            json.description = 'See Other';
+            break;
         case 304:
-            return { status: 304, description: 'Not Modified' };
+            json.description = 'Not Modified';
+            break;
         case 305:
-            return { status: 305, description: 'Use Proxy' };
+            json.description = 'Use Proxy';
+            break;
         case 307:
-            return { status: 307, description: 'Temporary Redirect' };
+            json.description = 'Temporary Redirect';
+            break;
         case 308:
-            return { status: 308, description: 'Permanent Redirect' };
+            json.description = 'Permanent Redirect';
+            break;
         case 310:
-            return { status: 310, description: 'Too many Redirects' };
+            json.description = 'Too many Redirects';
+            break;
 
         /* Client error */
         case 400:
-            return { status: 400, description: 'Bad Request' };
+            json.description = 'Bad Request';
+            break;
         case 401:
-            return { status: 401, description: 'Unauthorized' };
+            json.description = 'Unauthorized';
+            break;
         case 402:
-            return { status: 402, description: 'Payment Required' };
+            json.description = 'Payment Required';
+            break;
         case 403:
-            return { status: 403, description: 'Forbidden' };
+            json.description = 'Forbidden';
+            break;
         case 404:
-            return { status: 404, description: 'Not Found' };
+            json.description = 'Not Found';
+            break;
         case 405:
-            return { status: 405, description: 'Method Not Allowed' };
+            json.description = 'Method Not Allowed';
+            break;
         case 406:
-            return { status: 406, description: 'Not Acceptable' };
+            json.description = 'Not Acceptable';
+            break;
         case 407:
-            return { status: 407, description: 'Proxy Authentication Required' };
+            json.description = 'Proxy Authentication Required';
+            break;
         case 408:
-            return { status: 408, description: 'Request Time-out' };
+            json.description = 'Request Time-out';
+            break;
         case 409:
-            return { status: 409, description: 'Conflict' };
+            json.description = 'Conflict';
+            break;
         case 410:
-            return { status: 410, description: 'Gone' };
+            json.description = 'Gone';
+            break;
         case 411:
-            return { status: 411, description: 'Length Required' };
+            json.description = 'Length Required';
+            break;
         case 412:
-            return { status: 412, description: 'Precondition Failed' };
+            json.description = 'Precondition Failed';
+            break;
         case 413:
-            return { status: 413, description: 'Request Entity Too Large' };
+            json.description = 'Request Entity Too Large';
+            break;
         case 414:
-            return { status: 414, description: 'Request-URI Too Long' };
+            json.description = 'Request-URI Too Long';
+            break;
         case 415:
-            return { status: 415, description: 'Unsupported Media Type' };
+            json.description = 'Unsupported Media Type';
+            break;
         case 416:
-            return { status: 416, description: 'Requested range unsatisfiable' };
+            json.description = 'Requested range unsatisfiable';
+            break;
         case 417:
-            return { status: 417, description: 'Expectation failed' };
+            json.description = 'Expectation failed';
+            break;
         case 418:
-            return { status: 418, description: 'I’m a teapot' };
+            json.description = 'I’m a teapot';
+            break;
         case 422:
-            return { status: 422, description: 'Unprocessable entity' };
+            json.description = 'Unprocessable entity';
+            break;
         case 423:
-            return { status: 423, description: 'Locked' };
+            json.description = 'Locked';
+            break;
         case 424:
-            return { status: 424, description: 'Method failure' };
+            json.description = 'Method failure';
+            break;
         case 425:
-            return { status: 425, description: 'Unordered Collection' };
+            json.description = 'Unordered Collection';
+            break;
         case 426:
-            return { status: 426, description: 'Upgrade Required' };
+            json.description = 'Upgrade Required';
+            break;
         case 428:
-            return { status: 428, description: 'Precondition Required' };
+            json.description = 'Precondition Required';
+            break;
         case 429:
-            return { status: 429, description: 'Too Many Requests' };
+            json.description = 'Too Many Requests';
+            break;
         case 431:
-            return { status: 431, description: 'Request Header Fields Too Large' };
+            json.description = 'Request Header Fields Too Large';
+            break;
         case 441:
-            return { status: 441, description: 'Retry With' };
+            json.description = 'Retry With';
+            break;
         case 450:
-            return { status: 450, description: 'Blocked by Windows Parental Controls' };
+            json.description = 'Blocked by Windows Parental Controls';
+            break;
         case 451:
-            return { status: 451, description: 'Unavailable For Legal Reasons' };
+            json.description = 'Unavailable For Legal Reasons';
+            break;
         case 456:
-            return { status: 456, description: 'Unrecoverable Error' };
+            json.description = 'Unrecoverable Error';
+            break;
         case 499:
-            return { status: 499, description: 'Client has closed connection' };
+            json.description = 'Client has closed connection';
+            break;
 
         /* Server error */
         case 500:
-            return { status: 500, description: 'Internal Server Error' };
+            json.description = 'Internal Server Error';
+            break;
         case 501:
-            return { status: 501, description: 'Not Implemented' };
+            json.description = 'Not Implemented';
+            break;
         case 502:
-            return { status: 502, description: 'Bad Gateway ou Proxy Error' };
+            json.description = 'Bad Gateway ou Proxy Error';
+            break;
         case 503:
-            return { status: 503, description: 'Service Unavailable' };
+            json.description = 'Service Unavailable';
+            break;
         case 504:
-            return { status: 504, description: 'Gateway Time-out' };
+            json.description = 'Gateway Time-out';
+            break;
         case 505:
-            return { status: 505, description: 'HTTP Version not supported' };
+            json.description = 'HTTP Version not supported';
+            break;
         case 506:
-            return { status: 506, description: 'Variant also negociate' };
+            json.description = 'Variant also negociate';
+            break;
         case 507:
-            return { status: 507, description: 'Insufficient storage' };
+            json.description = 'Insufficient storage';
+            break;
         case 508:
-            return { status: 508, description: 'Loop detected' };
+            json.description = 'Loop detected';
+            break;
         case 509:
-            return { status: 509, description: 'Bandwidth Limit Exceeded' };
+            json.description = 'Bandwidth Limit Exceeded';
+            break;
         case 510:
-            return { status: 510, description: 'Not extended' };
+            json.description = 'Not extended';
+            break;
         case 511:
-            return { status: 511, description: 'Network authentication required' };
+            json.description = 'Network authentication required';
+            break;
 
 
         default:
-            return { status: 520, description: 'Web server is returning an unknown error' };
+            json.status = 520;
+            json.description = 'Web server is returning an unknown error';
+            break;
         }
+        
+        return json;
     }
-})();
+    
+    /**
+     * Make simple to return HTTP error code
+     * 
+     * @module ErrorHandler
+     */
+    var ErrorHandler = {
+        personalizedError: personalizedError,
+        defaultError: defaultError
+    };
+    
+    return ErrorHandler;
+}());

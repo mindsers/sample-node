@@ -1,20 +1,10 @@
 /*jslint node: true */
 "use strict";
 
+var Q = require('q');
+
+
 module.exports = (function () {
-    var Q = require('q');
-    
-    /**
-     * Controller for default actions
-     *
-     * @module DefaultController
-     */
-    var DefaultController = {
-        indexAction: indexAction
-    };
-    
-    return DefaultController;
-    
     /**
      * Page d'accueil
      *
@@ -26,4 +16,15 @@ module.exports = (function () {
     function indexAction(req, res, next) {
         res.render('index');
     }
-})();
+    
+    /**
+     * Controller for default actions
+     *
+     * @module DefaultController
+     */
+    var DefaultController = {
+        indexAction: indexAction
+    };
+    
+    return DefaultController;
+}());
