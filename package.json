@@ -1,28 +1,31 @@
 {
-    "name": "sample-project",
-    "version": "0.1.0",
-    "description": "Sample projet",
-    "main": "app.js",
-    "repository": {
-        "type": "git",
-        "url": "http://labs.nathanaelcherrier.com/mindsers/nodejs-sampleproject"
-    },
-    "bugs": {
-        "url": "http://labs.nathanaelcherrier.com/mindsers/nodejs-sampleproject/issues"
-    },
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "node app.js"
-    },
-    "author": "Nathanaël CHERRIER <dev@nathanaelcherrier.com>",
-    "keywords": [
-        "sample",
-        "nodejs"
-    ],
-    "license": "MIT",
-    "dependencies": {
-        "express": "^4.13.3",
-        "jade": "^1.11.0",
-        "q": "^1.4.1"
-    }
+  "name": "sample-project",
+  "version": "0.1.0",
+  "description": "Sample projet",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "http://labs.nathanaelcherrier.com/mindsers/nodejs-sampleproject"
+  },
+  "bugs": {
+    "url": "http://labs.nathanaelcherrier.com/mindsers/nodejs-sampleproject/issues"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "Nathanaël CHERRIER <dev@nathanaelcherrier.com>",
+  "keywords": [
+    "sample",
+    "nodejs"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.13.3",
+    "jade": "^1.11.0",
+    "q": "^1.4.1"
+  },
+  "devDependencies": {
+    "supertest": "^1.1.0"
+  }
 }

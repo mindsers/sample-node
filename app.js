@@ -12,6 +12,8 @@ configure(app);
 // Initialisation des routes
 router(app);
 
-var server = app.listen(3000, function () {
+app.listen(3000, function () {
     console.info('Server connected');
 });
+
+module.exports = app;
