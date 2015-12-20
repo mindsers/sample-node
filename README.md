@@ -2,6 +2,14 @@
 
 This project is a sample project. It can be used to easily start Node JS project.
 
+## Contribution
+
+To contribute or report issue, please go to [labs.nathanaelcherrier.com][project]
+
+## Documentation 
+
+A documention is available on [labs.nathanaelcherrier.com][wiki].
+
 ## License
 
 This project is under MIT License :
@@ -27,3 +35,7 @@ This project is under MIT License :
 > LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 > OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 > SOFTWARE.
+
+
+[wiki]: http://labs.nathanaelcherrier.com/mindsers/nodejs-sampleproject/wikis/home
+[project]: http://labs.nathanaelcherrier.com/mindsers/nodejs-sampleproject
