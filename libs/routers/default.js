@@ -7,6 +7,8 @@ var express = require('express'),
 var defaultController = require('../handlers/default.js'),
     errorHandler  = require('../handlers/error.js');
 
+errorHandler.config.format = 'json';
+
 router.route('/hello')
             .get(defaultController.indexAction)
             .post(errorHandler.defaultError(405));

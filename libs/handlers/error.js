@@ -3,6 +3,19 @@
 
 module.exports = (function () {
     /**
+     * Config of ErrorHandler
+     * 
+     * @object
+     * @attr {string} template - Name of templating file for error.
+     * @attr {string} format - Format of respone. 
+     * Support 'json' and 'html' format.
+     */
+    var config = {
+        tamplate: 'error',
+        format: 'json'
+    }
+    
+    /**
      * Send HTTP response with code and 
      * description custom.
      * 
@@ -16,7 +29,15 @@ module.exports = (function () {
             var response = _defaultJSON(code);
             response.description = msg;
             
-            res.status(code).json(response);
+            switch (config.format){
+                case 'html':
+                    res.status(code).render(config.tamplate, response);
+                    break;
+                default:
+                    res.status(code).json(response);
+                    break;
+            }
+            
         };
     }
     
@@ -29,7 +50,14 @@ module.exports = (function () {
      */
     function defaultError(code) {
         return function (req, res, next) {
-            res.status(code).json(_defaultJSON(code));
+            switch (config.format){
+                case 'html':
+                    res.status(code).render(config.tamplate, _defaultJSON(code));
+                    break;
+                default:
+                    res.status(code).json(_defaultJSON(code));
+                    break;
+            }
         };
     }
     
@@ -247,6 +275,7 @@ module.exports = (function () {
      * @module ErrorHandler
      */
     var ErrorHandler = {
+        config: config,
         personalizedError: personalizedError,
         defaultError: defaultError
     };
