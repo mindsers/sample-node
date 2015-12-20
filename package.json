@@ -11,7 +11,7 @@
     "url": "http://labs.nathanaelcherrier.com/mindsers/nodejs-sampleproject/issues"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha",
     "start": "node app.js"
   },
   "author": "Nathanaël CHERRIER <dev@nathanaelcherrier.com>",
