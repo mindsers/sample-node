@@ -33,7 +33,7 @@ describe('POST /hello', function (){
             .expect(405, done);
     });
     
-    it('shoudl return HTML content', function(done){        
+    it('shoudl return JSON content', function(done){        
         request(server)
             .post('/hello')
             .expect('Content-Type', /json/)
