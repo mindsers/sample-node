@@ -4,14 +4,14 @@
 var express = require('express'),
     router  = express.Router();
 
-var defaultController = require('../handlers/default.js'),
-    errorHandler  = require('../handlers/error.js');
+var defaultController = require('../controllers/default.controller.js'),
+    errorController  = require('../controllers/error.controller.js');
 
-errorHandler.config.format = 'json';
+errorController.config.format = 'json';
 
 router.route('/hello')
             .get(defaultController.indexAction)
-            .post(errorHandler.defaultError(405));
+            .post(errorController.defaultError(405));
 
 /**
  * All default routes
