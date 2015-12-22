@@ -271,13 +271,13 @@ module.exports = (function () {
     /**
      * Make simple to return HTTP error code
      * 
-     * @module ErrorHandler
+     * @module ErrorController
      */
-    var ErrorHandler = {
+    var ErrorController = {
         config: config,
         personalizedError: personalizedError,
         defaultError: defaultError
     };
     
-    return ErrorHandler;
+    return ErrorController;
 })();
