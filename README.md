@@ -4,11 +4,11 @@ This project is a sample project. It can be used to easily start Node JS project
 
 ## Contribution
 
-To contribute or report issue, please go to [labs.nathanaelcherrier.com][project]
+To contribute or report issue, please go to [git.nathanaelcherrier.com][project]
 
 ## Documentation 
 
-A documention is available on [labs.nathanaelcherrier.com][wiki].
+A documention is available on [git.nathanaelcherrier.com][wiki].
 
 ## License
 
@@ -37,5 +37,5 @@ This project is under MIT License :
 > SOFTWARE.
 
 
-[wiki]: http://labs.nathanaelcherrier.com/mindsers/nodejs-sampleproject/wikis/home
-[project]: http://labs.nathanaelcherrier.com/mindsers/nodejs-sampleproject
+[wiki]: https://git.nathanaelcherrier.com/mindsers/nodejs-sampleproject/wikis/home
+[project]: git@git.nathanaelcherrier.com:mindsers/nodejs-sampleproject.git
