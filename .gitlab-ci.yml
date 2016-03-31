@@ -1,0 +1,8 @@
+before_script:
+  - apt-get install -y nodejs
+
+nodejs_run:
+  stage: test
+  script:
+    - npm install
+    - npm test
