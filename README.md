@@ -38,4 +38,4 @@ This project is under MIT License :
 
 
 [wiki]: https://git.nathanaelcherrier.com/mindsers/nodejs-sampleproject/wikis/home
-[project]: git@git.nathanaelcherrier.com:mindsers/nodejs-sampleproject.git
+[project]: https://git.nathanaelcherrier.com/mindsers/nodejs-sampleproject.git
