@@ -2,6 +2,8 @@
 
 This project is a sample project. It can be used to easily start Node JS project.
 
+[![build status](https://git.nathanaelcherrier.com/mindsers/nodejs-sampleproject/badges/dev/build.svg)](https://git.nathanaelcherrier.com/mindsers/nodejs-sampleproject/commits/dev)
+
 ## Contribution
 
 To contribute or report issue, please go to [git.nathanaelcherrier.com][project]
