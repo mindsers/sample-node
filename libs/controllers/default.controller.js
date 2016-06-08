@@ -1,8 +1,4 @@
-/*jslint node: true */
 "use strict";
-
-var Q = require('q');
-
 
 module.exports = (function () {
     /**
