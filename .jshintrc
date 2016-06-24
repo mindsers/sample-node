@@ -1,6 +1,6 @@
 {
 	"node": true,
-	"ignorePaths": [
+	"ignore": [
         "build",
         "node_modules"
     ],
