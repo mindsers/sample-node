@@ -5,17 +5,12 @@ cache:
     - node_modules/
 
 stages:
-  - build
   - test
 
 before_script:
   - npm install mocha -g
   - npm install jshint -g
-
-nodejs_run:
-  stage: build
-  script:
-    - npm install
+  - npm install
 
 nodejs_mocha:
   stage: test
