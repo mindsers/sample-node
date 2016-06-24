@@ -1,10 +1,28 @@
-image: node:argon
+image: node:6.2.2
+
+cache:
+  paths:
+    - node_modules/
+
+stages:
+  - build
+  - test
 
 before_script:
   - npm install mocha -g
+  - npm install jshint -g
 
 nodejs_run:
-  stage: test
+  stage: build
   script:
     - npm install
+
+nodejs_mocha:
+  stage: test
+  script:
     - npm test
+
+nodejs_lint:
+  stage: test
+  script:
+    - jshint */*.js
