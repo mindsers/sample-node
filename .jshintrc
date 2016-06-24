@@ -1,5 +1,9 @@
 {
 	"node": true,
+	"ignorePaths": [
+        "build",
+        "node_modules"
+    ],
 	"globals"   : {
 		"describe"   : false,
 		"it"         : false,
