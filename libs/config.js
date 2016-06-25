@@ -10,7 +10,7 @@ var express = require('express');
  * @return {object} Express app instance for queue chaining 
  */
 module.exports = function (app) {
-    app.set('view engine', 'jade');
+    app.set('view engine', 'pug');
     app.use('/static', express.static(__dirname + '/../public'));
     
     return app;
