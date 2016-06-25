@@ -11,7 +11,7 @@
     "url": "http://labs.nathanaelcherrier.com/mindsers/nodejs-sampleproject/issues"
   },
   "scripts": {
-    "test": "mocha --reporter spec",
+    "test": "jshint */*.js && mocha --reporter spec",
     "start": "node app.js"
   },
   "author": "Nathanaël CHERRIER <dev@nathanaelcherrier.com>",
@@ -22,8 +22,7 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.13.3",
-    "jade": "^1.11.0",
-    "q": "^1.4.1"
+    "jade": "^1.11.0"
   },
   "devDependencies": {
     "supertest": "^1.1.0"
