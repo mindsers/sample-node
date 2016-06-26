@@ -11,7 +11,9 @@
     "url": "http://labs.nathanaelcherrier.com/mindsers/nodejs-sampleproject/issues"
   },
   "scripts": {
-    "test": "jshint */*.js && mocha --reporter spec",
+    "eslint": "eslint libs/* test/* public/js/* --ext .js",
+    "mocha": "mocha --reporter spec",
+    "test": "npm run eslint && npm run mocha",
     "start": "node app.js"
   },
   "author": "Nathanaël CHERRIER <dev@nathanaelcherrier.com>",
@@ -25,6 +27,10 @@
     "pug": "^2.0.0-beta3"
   },
   "devDependencies": {
+    "eslint": "^2.13.1",
+    "eslint-config-airbnb-base": "^3.0.1",
+    "eslint-plugin-import": "^1.9.2",
+    "mocha": "^2.5.3",
     "supertest": "^1.1.0"
   }
 }

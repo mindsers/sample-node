@@ -13,11 +13,9 @@ before_script:
 nodejs_mocha:
   stage: test
   script:
-    - npm install mocha -g
-    - mocha --reporter spec
+    - npm run mocha
 
 nodejs_lint:
   stage: test
   script:
-    - npm install jshint -g
-    - jshint */*.js
+    - npm run eslint

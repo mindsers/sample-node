@@ -1,4 +1,4 @@
-/*jslint node: true */
+/*eslint-env mocha */
 "use strict";
 
 var assert = require('assert'),
