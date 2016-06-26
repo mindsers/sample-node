@@ -1,0 +1,13 @@
+extends: airbnb-base
+parserOptions:
+    sourceType: script
+env:
+    node: true
+rules:
+    indent:
+        - error
+        - 4
+    no-multi-spaces: 
+        - error
+        - exceptions: 
+            VariableDeclarator: true
