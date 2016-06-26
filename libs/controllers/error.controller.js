@@ -1,67 +1,78 @@
-"use strict";
+'use strict';
 
-module.exports = (function () {
-    /**
-     * Config of ErrorHandler
-     * 
-     * @object
-     * @attr {string} template - Name of templating file for error.
-     * @attr {string} format - Format of respone. 
-     * Support 'json' and 'html' format.
-     */
-    var config = {
-        tamplate: 'error',
-        format: 'json'
+/**
+ * Make simple to return HTTP error code
+ *
+ * @module ErrorController
+ */
+class ErrorController {
+    constructor() {
+        /**
+         * Config of ErrorHandler
+         *
+         * @object
+         * @attr {string} template - Name of templating file for error.
+         * @attr {string} format - Format of respone.
+         * Support 'json' and 'html' format.
+         */
+        this.config = {
+            template: 'error',
+            format: 'json',
+        };
     }
-    
+
     /**
-     * Send HTTP response with code and 
+     * Send HTTP response with code and
      * description custom.
-     * 
+     *
      * @function personalizedError
      * @params {int} code - HTTP Error Code
      * @params {string} msg - Description
      * @return {function} express middleware
      */
-    function personalizedError(code, msg) {
-        return function (req, res, next) {
-            var response = _defaultJSON(code);
+    personalizedError(code, msg) {
+        const self = this;
+
+        return (req, res) => {
+            const response = self.defaultJSON(code);
             response.description = msg;
-            
-            switch (config.format){
-                case 'html':
-                    res.status(code).render(config.tamplate, response);
-                    break;
-                default:
-                    res.status(code).json(response);
-                    break;
+
+            switch (self.config.format) {
+            case 'html':
+                res.status(code).render(self.config.template, response);
+                break;
+            default:
+                res.status(code).json(response);
+                break;
             }
         };
     }
-    
+
     /**
      * Send HTTP default response for HTTP code
-     * 
+     *
      * @function defaultError
      * @params {int} code - HTTP Error Code
      * @return {function} express middleware
      */
-    function defaultError(code) {
-        return function (req, res, next) {
-            switch (config.format){
-                case 'html':
-                    res.status(code).render(config.tamplate, _defaultJSON(code));
-                    break;
-                default:
-                    res.status(code).json(_defaultJSON(code));
-                    break;
+    defaultError(code) {
+        const self = this;
+
+        return (req, res) => {
+            switch (self.config.format) {
+            case 'html':
+                res.status(code).render(self.config.template, self.defaultJSON(code));
+                break;
+            default:
+                res.status(code).json(self.defaultJSON(code));
+                break;
             }
         };
     }
-    
-    function _defaultJSON(code) {
-        var json = { status: code, description: '' };
-        
+
+    defaultJSON(code) {
+        const json = { status: code, description: '' };
+
         switch (code) {
         /* Success */
         case 200:
@@ -263,20 +274,9 @@ module.exports = (function () {
             json.description = 'Web server is returning an unknown error';
             break;
         }
-        
+
         return json;
     }
-    
-    /**
-     * Make simple to return HTTP error code
-     * 
-     * @module ErrorController
-     */
-    var ErrorController = {
-        config: config,
-        personalizedError: personalizedError,
-        defaultError: defaultError
-    };
-    
-    return ErrorController;
-})();
+}
+
+module.exports = new ErrorController();
