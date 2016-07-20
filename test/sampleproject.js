@@ -1,44 +1,41 @@
-"use strict";
+/* eslint-env node, mocha */
+'use strict';
 
-var assert = require('assert'),
-    request = require('supertest');
+const request = require('supertest');
+const server = require('../app');
 
-describe('GET /hello', function (){
-    var server = require('../app');
-    
-    it('shoudl return 200 HTTP error', function(done){        
+describe('GET /hello', () => {
+    it('shoudl return 200 HTTP error', (done) => {
         request(server)
             .get('/hello')
             .expect(200, done);
     });
-    
-    it('shoudl return HTML content', function(done){        
+
+    it('shoudl return HTML content', (done) => {
         request(server)
             .get('/hello')
             .expect('Content-Type', /html/)
-            .end(function(err, res){
+            .end((err) => {
                 if (err) return done(err);
-                done();
+                return done();
             });
     });
 });
 
-describe('POST /hello', function (){
-    var server = require('../app');
-    
-    it('shoudl return 405 HTTP error', function(done){        
+describe('POST /hello', () => {
+    it('shoudl return 405 HTTP error', (done) => {
         request(server)
             .post('/hello')
             .expect(405, done);
     });
-    
-    it('shoudl return JSON content', function(done){        
+
+    it('shoudl return JSON content', (done) => {
         request(server)
             .post('/hello')
             .expect('Content-Type', /json/)
-            .end(function(err, res){
+            .end((err) => {
                 if (err) return done(err);
-                done();
+                return done();
             });
     });
 });

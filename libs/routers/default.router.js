@@ -1,10 +1,10 @@
-"use strict";
+'use strict';
 
-var express = require('express'),
-    router  = express.Router();
+const express = require('express');
+const router  = express.Router(); // eslint-disable-line new-cap
 
-var defaultController = require('../controllers/default.controller.js'),
-    errorController  = require('../controllers/error.controller.js');
+const defaultController = require('../controllers/default.controller.js');
+const errorController   = require('../controllers/error.controller.js');
 
 errorController.config.format = 'json';
 
@@ -14,7 +14,7 @@ router.route('/hello')
 
 /**
  * All default routes
- * 
+ *
  * @export Router/Default
  */
 module.exports = router;

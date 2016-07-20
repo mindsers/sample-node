@@ -1,10 +1,21 @@
-image: node:argon
+image: node:latest
+
+cache:
+  paths:
+    - node_modules/
+
+stages:
+  - test
 
 before_script:
-  - npm install mocha -g
+  - npm install
 
-nodejs_run:
+nodejs_mocha:
   stage: test
   script:
-    - npm install
-    - npm test
+    - npm run mocha
+
+nodejs_lint:
+  stage: test
+  script:
+    - npm run eslint
