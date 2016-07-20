@@ -1,7 +1,7 @@
 'use strict'
 
 const express = require('express')
-const router  = express.Router() // eslint-disable-line new-cap
+const router  = express.Router()
 
 const defaultController = require('../controllers/default.controller.js')
 const errorController   = require('../controllers/error.controller.js')

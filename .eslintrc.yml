@@ -4,12 +4,9 @@ parserOptions:
 env:
     node: true
 rules:
-    indent:
+    no-multi-spaces:
         - error
-        - 2
-    no-multi-spaces: 
-        - error
-        - exceptions: 
+        - exceptions:
             VariableDeclarator: true
     space-before-function-paren:
         - off
