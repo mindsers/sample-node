@@ -1,6 +1,6 @@
-'use strict';
+'use strict'
 
-const defaultRouter = require('./default.router.js');
+const defaultRouter = require('./default.router.js')
 
 /**
  * Apply all routing rules.
@@ -9,7 +9,7 @@ const defaultRouter = require('./default.router.js');
  * @return {object} Express app instance for queue chaining
  */
 module.exports = (app) => {
-    app.use('/', defaultRouter);
+  app.use('/', defaultRouter)
 
-    return app;
-};
+  return app
+}

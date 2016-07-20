@@ -1,14 +1,15 @@
 # Node JS - Sample project
-[![build status](https://git.nathanaelcherrier.com/mindsers/nodejs-sampleproject/badges/dev/build.svg)](https://git.nathanaelcherrier.com/mindsers/nodejs-sampleproject/commits/dev)
+
+[![build status][badge_build_status_image]][badge_build_status_link]
+[![standardjs style][badge_js_code_style_image]][badge_js_code_style_link]
 
 This project is a sample project. It can be used to easily start Node JS project.
-
 
 ## Contribution
 
 To contribute or report issue, please go to [git.nathanaelcherrier.com][project]
 
-## Documentation 
+## Documentation
 
 A documention is available on [git.nathanaelcherrier.com][wiki].
 
@@ -38,6 +39,10 @@ This project is under MIT License :
 > OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 > SOFTWARE.
 
-
 [wiki]: https://git.nathanaelcherrier.com/mindsers/nodejs-sampleproject/wikis/home
 [project]: https://git.nathanaelcherrier.com/mindsers/nodejs-sampleproject.git
+
+[badge_build_status_image]: https://git.nathanaelcherrier.com/mindsers/nodejs-sampleproject/badges/master/build.svg
+[badge_build_status_link]: https://git.nathanaelcherrier.com/mindsers/nodejs-sampleproject/commits/dev
+[badge_js_code_style_image]: https://img.shields.io/badge/code%20style-standard-yellow.svg
+[badge_js_code_style_link]: http://standardjs.com

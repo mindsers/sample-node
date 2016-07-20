@@ -1,4 +1,4 @@
-extends: airbnb-base
+extends: standard
 parserOptions:
     sourceType: script
 env:
@@ -6,8 +6,10 @@ env:
 rules:
     indent:
         - error
-        - 4
+        - 2
     no-multi-spaces: 
         - error
         - exceptions: 
             VariableDeclarator: true
+    space-before-function-paren:
+        - off
