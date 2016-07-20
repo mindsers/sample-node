@@ -1,14 +1,14 @@
 # Node JS - Sample project
-[![build status](https://git.nathanaelcherrier.com/mindsers/nodejs-sampleproject/badges/dev/build.svg)](https://git.nathanaelcherrier.com/mindsers/nodejs-sampleproject/commits/dev)
+
+[![build status](https://git.nathanaelcherrier.com/mindsers/nodejs-sampleproject/badges/master/build.svg)](https://git.nathanaelcherrier.com/mindsers/nodejs-sampleproject/commits/dev) [![standardjs style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
 
 This project is a sample project. It can be used to easily start Node JS project.
-
 
 ## Contribution
 
 To contribute or report issue, please go to [git.nathanaelcherrier.com][project]
 
-## Documentation 
+## Documentation
 
 A documention is available on [git.nathanaelcherrier.com][wiki].
 
@@ -37,7 +37,6 @@ This project is under MIT License :
 > LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 > OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 > SOFTWARE.
-
 
 [wiki]: https://git.nathanaelcherrier.com/mindsers/nodejs-sampleproject/wikis/home
 [project]: https://git.nathanaelcherrier.com/mindsers/nodejs-sampleproject.git
