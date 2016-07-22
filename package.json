@@ -11,9 +11,10 @@
     "url": "http://labs.nathanaelcherrier.com/mindsers/nodejs-sampleproject/issues"
   },
   "scripts": {
-    "eslint": "eslint libs/* test/* public/js/* --ext .js",
-    "mocha": "mocha --reporter spec",
-    "test": "npm run eslint && npm run mocha",
+    "lint": "eslint libs/* test/* public/js/* --ext .js",
+    "unit-test": "mocha --reporter spec",
+    "coverage": "istanbul cover node_modules/.bin/_mocha -- -u exports -R spec test/**/*",
+    "test": "npm run lint && npm run coverage",
     "start": "node app.js"
   },
   "author": "Nathanaël CHERRIER <dev@nathanaelcherrier.com>",
@@ -31,6 +32,7 @@
     "eslint-config-standard": "^5.3.5",
     "eslint-plugin-promise": "^2.0.0",
     "eslint-plugin-standard": "^2.0.0",
+    "istanbul": "^0.4.4",
     "mocha": "^2.5.3",
     "supertest": "^1.1.0"
   }
