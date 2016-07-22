@@ -26,8 +26,8 @@ class ErrorController {
    * description custom.
    *
    * @function personalizedError
-   * @params {int} code - HTTP Error Code
-   * @params {string} msg - Description
+   * @param {int} code - HTTP Error Code
+   * @param {string} msg - Description
    * @return {function} express middleware
    */
   personalizedError(code, msg) {
@@ -52,7 +52,7 @@ class ErrorController {
    * Send HTTP default response for HTTP code
    *
    * @function defaultError
-   * @params {int} code - HTTP Error Code
+   * @param {int} code - HTTP Error Code
    * @return {function} express middleware
    */
   defaultError(code) {

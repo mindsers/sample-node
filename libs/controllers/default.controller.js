@@ -10,9 +10,9 @@ class DefaultController {
    * Page d'accueil
    *
    * @function indexAction
-   * @params {object} req - Requette de l'utilisateur
-   * @params {object} res - Reponse à envoyer à l'utilisateur
-   * @params {object} next - Permet de passer au middleware suivant
+   * @param {object} req - Requette de l'utilisateur
+   * @param {object} res - Reponse à envoyer à l'utilisateur
+   * @param {object} next - Permet de passer au middleware suivant
    */
   indexAction(req, res) {
     res.render('index')
