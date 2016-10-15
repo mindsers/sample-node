@@ -2,6 +2,7 @@
 
 [![build status][badge_build_status_image]][badge_build_status_link]
 [![standardjs style][badge_js_code_style_image]][badge_js_code_style_link]
+[![coverage report][badge_code_coverage_image]][badge_build_status_link]
 
 This project is a sample project. It can be used to easily start Node JS project.
 
@@ -46,3 +47,4 @@ This project is under MIT License :
 [badge_build_status_link]: https://git.nathanaelcherrier.com/mindsers/nodejs-sampleproject/commits/dev
 [badge_js_code_style_image]: https://img.shields.io/badge/code%20style-standard-yellow.svg
 [badge_js_code_style_link]: http://standardjs.com
+[badge_code_coverage_image]: https://git.nathanaelcherrier.com/mindsers/nodejs-sampleproject/badges/dev/coverage.svg
