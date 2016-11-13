@@ -10,12 +10,16 @@ stages:
 before_script:
   - npm install
 
-nodejs_mocha:
+nodejs_unit_test:
   stage: test
   script:
-    - npm run mocha
+    - npm run coverage
+  tags:
+    - nodejs
 
 nodejs_lint:
   stage: test
   script:
-    - npm run eslint
+    - npm run lint
+  tags:
+    - nodejs

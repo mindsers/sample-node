@@ -5,7 +5,7 @@ const express = require('express')
 /**
  * Make configuration on the app
  *
- * @params {object} app - Express app instance
+ * @param {object} app - Express app instance
  * @return {object} Express app instance for queue chaining
  */
 module.exports = (app) => {

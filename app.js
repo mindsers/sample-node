@@ -1,4 +1,4 @@
-"use strict"
+'use strict'
 
 const express   = require('express')
 const router    = require('./libs/routers/router.js')
@@ -12,7 +12,7 @@ configure(app)
 router(app)
 
 app.listen(3000, () => {
-    console.info('Server connected')
+  console.info('Server connected')
 })
 
 module.exports = app
