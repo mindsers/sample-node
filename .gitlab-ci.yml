@@ -14,8 +14,12 @@ nodejs_unit_test:
   stage: test
   script:
     - npm run coverage
+  tags:
+    - nodejs
 
 nodejs_lint:
   stage: test
   script:
     - npm run lint
+  tags:
+    - nodejs
