@@ -6,14 +6,6 @@
 
 This project is a sample project. It can be used to easily start Node JS project.
 
-## Contribution
-
-To contribute or report issue, please go to [git.nathanaelcherrier.com][project]
-
-## Documentation
-
-A documention is available on [git.nathanaelcherrier.com][wiki].
-
 ## License
 
 This project is under MIT License :
