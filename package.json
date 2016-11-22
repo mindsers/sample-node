@@ -11,11 +11,11 @@
     "url": "http://labs.nathanaelcherrier.com/mindsers/nodejs-sampleproject/issues"
   },
   "scripts": {
-    "lint": "eslint libs/* test/* public/js/* --ext .js",
-    "unit-test": "mocha --reporter spec",
-    "coveralls": "nyc report --reporter=text-lcov | coveralls",
-    "coverage": "nyc npm run unit-test",
-    "test": "npm run lint && npm run coverage && npm run coveralls",
+    "test:lint": "eslint libs/* test/* public/js/* --ext .js",
+    "test:unit": "mocha --reporter spec",
+    "test:coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "test:coverage": "nyc npm run test:unit",
+    "test": "npm run test:coverage && npm run test:coveralls",
     "start": "node app.js"
   },
   "author": "Nathanaël CHERRIER <dev@nathanaelcherrier.com>",
