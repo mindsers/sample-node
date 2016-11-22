@@ -5,10 +5,10 @@
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "http://labs.nathanaelcherrier.com/mindsers/nodejs-sampleproject"
+    "url": "https://github.com/Mindsers/nativetable"
   },
   "bugs": {
-    "url": "http://labs.nathanaelcherrier.com/mindsers/nodejs-sampleproject/issues"
+    "url": "https://github.com/Mindsers/nativetable/issues"
   },
   "scripts": {
     "test:lint": "eslint libs/* test/* public/js/* --ext .js",
