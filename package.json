@@ -13,8 +13,9 @@
   "scripts": {
     "lint": "eslint libs/* test/* public/js/* --ext .js",
     "unit-test": "mocha --reporter spec",
-    "coverage": "istanbul cover node_modules/.bin/_mocha -- -u exports -R spec test/**/*",
-    "test": "npm run lint && npm run coverage",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "coverage": "nyc npm run unit-test",
+    "test": "npm run lint && npm run coverage && npm run coveralls",
     "start": "node app.js"
   },
   "author": "Nathanaël CHERRIER <dev@nathanaelcherrier.com>",
@@ -28,12 +29,14 @@
     "pug": "^2.0.0-beta3"
   },
   "devDependencies": {
+    "coveralls": "^2.11.15",
     "eslint": "^2.13.1",
     "eslint-config-standard": "^5.3.5",
     "eslint-plugin-promise": "^2.0.0",
     "eslint-plugin-standard": "^2.0.0",
-    "istanbul": "^0.4.4",
     "mocha": "^2.5.3",
+    "mocha-lcov-reporter": "^1.2.0",
+    "nyc": "^9.0.1",
     "supertest": "^1.1.0"
   }
 }
