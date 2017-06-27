@@ -2,7 +2,7 @@
   "name": "sample-project",
   "version": "1.0.0",
   "description": "Sample projet",
-  "main": "app.js",
+  "main": "src/app.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/Mindsers/sample-node"
@@ -11,12 +11,12 @@
     "url": "https://github.com/Mindsers/sample-node/issues"
   },
   "scripts": {
-    "test:lint": "eslint libs/* test/* public/js/* --ext .js",
+    "test:lint": "eslint src/* test/* --ext .js",
     "test:unit": "mocha --reporter spec",
     "test:coveralls": "nyc report --reporter=text-lcov | coveralls",
     "test:coverage": "nyc npm run test:unit",
     "test": "npm run test:coverage && npm run test:coveralls",
-    "start": "node app.js"
+    "start": "node src/app.js"
   },
   "author": "Nathanaël CHERRIER <dev@nathanaelcherrier.com>",
   "keywords": [
