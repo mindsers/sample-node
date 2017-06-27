@@ -1,6 +1,7 @@
 'use strict'
 
 const express = require('express')
+const path    = require('path')
 
 /**
  * Make configuration on the app
@@ -10,7 +11,9 @@ const express = require('express')
  */
 module.exports = (app) => {
   app.set('view engine', 'pug')
-  app.use('/static', express.static(`${__dirname}/../public`))
+  app.set('views', path.join(__dirname, '/views'))
+
+  app.use('/static', express.static(`${__dirname}/public`))
 
   return app
 }

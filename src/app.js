@@ -1,8 +1,10 @@
 'use strict'
 
 const express   = require('express')
-const router    = require('./libs/routers/router.js')
-const configure = require('./libs/config.js')
+
+const router    = require('./routers/router.js')
+const configure = require('./config.js')
+
 const app       = express()
 
 // Configuration des routes
