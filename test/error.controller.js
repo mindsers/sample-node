@@ -2,7 +2,7 @@
 'use strict'
 
 const assert = require('assert')
-const errorController = require('../libs/controllers/error.controller.js')
+const errorController = require('../src/controllers/error.controller.js')
 
 describe('Errorontroller', () => {
   const req = {}

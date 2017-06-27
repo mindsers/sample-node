@@ -2,7 +2,7 @@
 'use strict'
 
 const request = require('supertest')
-const server = require('../app')
+const server = require('../src/app')
 
 describe('GET /hello', () => {
   it('shoudl return 200 HTTP error', (done) => {
