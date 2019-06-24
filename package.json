@@ -29,14 +29,14 @@
     "pug": "^2.0.0-beta3"
   },
   "devDependencies": {
-    "coveralls": "^2.11.15",
-    "eslint": "^2.13.1",
-    "eslint-config-standard": "^5.3.5",
-    "eslint-plugin-promise": "^2.0.0",
-    "eslint-plugin-standard": "^2.0.0",
-    "mocha": "^2.5.3",
+    "coveralls": "^3.0.4",
+    "eslint": "^6.0.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "mocha": "^6.1.4",
     "mocha-lcov-reporter": "^1.2.0",
-    "nyc": "^9.0.1",
-    "supertest": "^1.1.0"
+    "nyc": "^14.1.1",
+    "supertest": "^4.0.2"
   }
 }
